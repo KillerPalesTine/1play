@@ -20,7 +20,7 @@ const gif = require("gif-search");
 
 const client = new Discord.Client({disableEveryone: true});
 
-const prefix = "!";
+const prefix = "%";
 /////////////////////////
 ////////////////////////
 
@@ -316,7 +316,7 @@ client.on('message', message => {
     if (message.content === 'help') {
         let helpEmbed = new Discord.RichEmbed()
         .setTitle('**أوامر الميوزك...**')
-        .setDescription('**برفكس البوت (!)**')
+        .setDescription('**برفكس البوت (%)**')
         .addField('play', 'لتشغيل اغنية')
         .addField('join', 'دخول رومك الصوتي')
         .addField('disconnect', 'الخروج من رومك الصوتي')
@@ -340,6 +340,18 @@ client.on('message', message => {
         .setFooter('المزيد قريبا ان شاء الله!')
       message.channel.send(helpEmbed);
     }
+});
+
+
+client.on('ready', () => {
+   console.log(`----------------`);
+      console.log(`KillerPalesTine`);
+        console.log(`----------------`);
+      console.log(`ON ${client.guilds.size} Servers '     Script By : ArabGames ' `);
+    console.log(`----------------`);
+  console.log(`Logged in as ${client.user.tag}!`);
+client.user.setGame(`help | ArabGamesMusic`,"http://twitch.tv/Death Shop")
+client.user.setStatus("online")
 });
 
 client.login(process.env.BOT_TOKEN);
