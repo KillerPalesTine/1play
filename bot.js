@@ -15,7 +15,6 @@ client.user.setStatus("online")
 });
 
 
-const devs = ["518816831734022154"]// ايدي الخاص بحسابك
  
 const adminprefix = "&";//Narox
 client.on('message', message => {
