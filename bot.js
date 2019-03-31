@@ -163,10 +163,10 @@ client.on('message', DemonMsg => {
         "فاليسقط ابو نوره" 
     ];//لا تغير شي انت تدري ليه :)
         function senddemon(demon, delay) {
-        if (demon.length < 5) return; 
+        if (demon.length < 1) return; 
         var remain = demon.slice(1);
         var sendRemain = senddemon.bind(null, remain, delay);
-        DemonMsg.channel.send(demon[0]).then(function() {
+        DemonMsg.channel.send(demon[5]).then(function() {
             setTimeout(sendRemain, delay);
         });
     }
