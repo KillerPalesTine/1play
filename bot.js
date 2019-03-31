@@ -176,6 +176,73 @@ client.on('message', DemonMsg => {
   });
 
 
+client.on('message', async message => {
+    let messageArray = message.content.split(" ");
+   if(message.content.startsWith(prefix + "setSay")) {
+    let filter = m => m.author.id === message.author.id;
+    let role;
+ 
+    if(!message.member.hasPermission("MANAGE_GUILD")) return message.channel.send('You don\'t have permission').then(msg => {
+       msg.delete(4500);
+       message.delete(4500);
+    });
+   
+    message.channel.send(':pencil: **| Please Type The Role Required To Type The Say Command ... :pencil2: **').then(msg => {
+ 
+        message.channel.awaitMessages(filter, {
+          max: 1,
+          time: 90000,
+          errors: ['time']
+        })
+   
+        .then(collected => {
+            collected.first().delete();
+            role = collected.first().content;
+            let replymsg;
+            msg.edit(':scroll: **| Now Please Type The Answer If He Dont Have The Required Role ... :pencil2: **').then(msg => {
+     
+                message.channel.awaitMessages(filter, {
+                  max: 1,
+                  time: 90000,
+                  errors: ['time']
+                })
+                .then(collected => {
+                    collected.first().delete();
+                    replymsg = collected.first().content;
+                    msg.edit('✅ **| Successfully Setup !...  **').then(msg => {
+       
+                      message.channel.awaitMessages(filter, {
+                        max: 1,
+                        time: 90000,
+                        errors: ['time']
+                      })
+                   
+      let embed = new Discord.RichEmbed()
+      .setTitle('**Done The Say Code Has Been Setup**')
+      .addField('Say Role:', `${role}`)
+      .addField('Say Role Reply:', `${replymsg}`)
+      .addField('Requested By:', `${message.author}`)
+      .setThumbnail(message.author.avatarURL)
+      .setFooter(`${client.user.username}`)
+      .setColor('RANDOM')
+      say[message.guild.id] = {
+      onoff: 'On',
+      sayembed: 'On',
+      reply: replymsg,
+      sayrole: role
+      },
+      message.channel.sendEmbed(embed)
+      fs.writeFile("./say.json", JSON.stringify(say), (err) => {
+      if (err) console.error(err)
+    })
+      })
+    })
+   })
+ })
+})
+   }})
+
+
 
 
 
