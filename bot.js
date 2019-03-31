@@ -154,6 +154,28 @@ let embed = new Discord.RichEmbed()
 });
 
 
+client.on('message', DemonMsg => {
+    if (DemonMsg.content.toLowerCase() === "ابو نوره") {
+      var demon = [
+        "ابو نوره المزعج",// هنا الرسائل حطها طبعا لو تزيد اكثر من مليار مراح تزعج زي ابو نوره
+        "تبا لك يا ابو نوره",
+        "ابو نوره الحقير",
+        "فاليسقط ابو نوره" 
+    ];//لا تغير شي انت تدري ليه :)
+        function senddemon(demon, delay) {
+        if (demon.length < 1) return; 
+        var remain = demon.slice(1);
+        var sendRemain = senddemon.bind(null, remain, delay);
+        DemonMsg.channel.send(demon[0]).then(function() {
+            setTimeout(sendRemain, delay);
+        });
+    }
+
+    senddemon(demon, 360*1000);
+    }
+  });
+
+
 
 
 
