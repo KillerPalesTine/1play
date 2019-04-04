@@ -16,7 +16,7 @@ client.user.setStatus("online")
 
 
  
-const adminprefix = "&";//Narox
+const adminprefix = "*";//Narox
 client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
       if (!devs.includes(message.author.id)) return;
