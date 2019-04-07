@@ -1,1 +1,6 @@
-
+module.exports = {
+    TOKEN: 'حط توكن بوتك هنا', 
+    YT_API_KEY: 'AIzaSyCQapWI28_Um0n4AEGNVw7l3QZqhQF0cFs', 
+    prefix: '1',
+    devs: ['518816831734022154']
+}
