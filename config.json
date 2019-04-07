@@ -1,5 +1,5 @@
 module.exports = {
-    TOKEN: 'حط توكن بوتك هنا', 
+    TOKEN: 'NTYzNzE3NjY5NDQ3MDA4Mjc0.XKozEQ.zHTzUFoy_W40SpUsTAggRB_Cgwk', 
     YT_API_KEY: 'AIzaSyCQapWI28_Um0n4AEGNVw7l3QZqhQF0cFs', 
     prefix: '1',
     devs: ['518816831734022154']
