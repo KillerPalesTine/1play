@@ -1,6 +1,5 @@
-module.exports = {
-    TOKEN: 'NTYzNzE3NjY5NDQ3MDA4Mjc0.XKo1RQ.sPqVsO0B3xsYc0mgFUf3qRt20q8', 
-    YT_API_KEY: 'AIzaSyCQapWI28_Um0n4AEGNVw7l3QZqhQF0cFs', 
-    prefix: '1',
-    devs: ['518816831734022154']
+{
+  "developers": ["518816831734022154"],
+  "prefix": "1",
+  "token": "NTY0NDk2MjM3ODEwNjc5ODE3.XKo39g.QbHkcsa1uA_2PKLM2Y9oLG2Cb2E"
 }
