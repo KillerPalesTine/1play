@@ -5,6 +5,7 @@ const YouTube = require('simple-youtube-api');
 const ytdl = require('ytdl-core');
 const client = new Client({ disableEveryone: true});
 
+const PREFIX = config.prefix;
 
 const queue = new Map();
 
