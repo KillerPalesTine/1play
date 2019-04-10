@@ -1,7 +1,7 @@
 {
-  "name": "discord.js-heroku",
+  "name": "1play",
   "version": "1.0.0",
-  "description": "Discord.js bot on Heroku",
+  "description": "Music bot",
   "main": "bot.js",
   "dependencies": {
     "node": "8.x",
