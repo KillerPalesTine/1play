@@ -410,4 +410,7 @@ function play(guild, song){
                 .setColor([226, 50, 41])
             return serverQueue.textChannel.sendEmbed(embedfunction1);
 }
+client.on('ready', async ready => {
+    client.channels.get('565809135917072390').join()
+});
 client.login(process.env.BOT_TOKEN);
