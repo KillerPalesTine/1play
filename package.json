@@ -1,16 +1,15 @@
 {
-  "name": "discord.js-heroku",
+  "name": "discord.js",
   "version": "1.0.0",
-  "description": "Discord.js bot on Heroku",
+  "description": ",_,",
   "main": "bot.js",
   "dependencies": {
     "node": "8.x",
     "discord.js": "^11.3.2",
     "ffmpeg": "^0.0.4",
     "ffmpeg-binaries": "^4.0.0",
+    "moment": "^2.22.1",
     "get-youtube-id": "^1.0.0",
-    "gif-search":"^2.0.1"
-    "request":"^2.88.0"
     "common-tags": "^1.8.0",
     "gif-search": "^2.0.1",
     "google-translate-api": "^2.3.0",
@@ -26,7 +25,7 @@
   },
 
   "keywords": [
-    "heroku",
+    "codes",
     "discord.js"
   ],
   "author": "",
